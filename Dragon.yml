@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: search
+  template:
+    metadata:
+      labels:
+        app: search
+    spec:
+      containers:
+      - image: benchao/search-photo:1.0
+        name: search
+        #command: ["python bot.py $(token)"] #The running command to start the container will overwrite the Entrypoint in the container, corresponding to the ENTRYPOINT in the Dockerfile.
+        #args: ["python bot.py $(token)"] #The command parameters to start the container, corresponding to the CMD parameters in the Dockerfile
+      environment:
+       - token=$token 

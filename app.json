@@ -1,0 +1,17 @@
+{
+	"name": "Search photo bot",
+	"description": "Run telegram bot on heroku",
+	"repository": "https://github.com/Solo-Dragon/Anime-Search",
+	"keywords": ["telegram"],
+	"env": {
+		"TELEGRAM_TOKEN": {
+			"description": "TELEGRAM_TOKEN you get from bot_father",
+			"value": ""
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/python"
+		}
+	]
+}

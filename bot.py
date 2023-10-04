@@ -45,7 +45,7 @@ def get_saucenao(message):
 
 @bot.message_handler(commands=['ascii2d'])
 def send_ascii2d(message):
-    bot.send_message(chat_id=message.chat.id, text='Please send a picture or enter /cancel to Cancel",parse_mode="MarkdownV2")
+    bot.send_message(chat_id=message.chat.id, text="Please send a picture or enter /cancel to Cancel",parse_mode="MarkdownV2")
     bot.register_next_step_handler(message, get_ascii2d)
 
 def get_ascii2d(message):
